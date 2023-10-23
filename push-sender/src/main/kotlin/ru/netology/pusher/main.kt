@@ -15,13 +15,23 @@ fun main() {
 
     FirebaseApp.initializeApp(options)
 
+//    val message = Message.builder()
+//        .putData("action", "LIKE")
+//        .putData("content", """{
+//          "userId": 1,
+//          "userName": "Vasiliy",
+//          "postId": 2,
+//          "postAuthor": "Netology"
+//        }""".trimIndent())
+//        .setToken(token)
+//        .build()
+
     val message = Message.builder()
-        .putData("action", "LIKE")
+        .putData("action", "POST")
         .putData("content", """{
-          "userId": 1,
-          "userName": "Vasiliy",
-          "postId": 2,
-          "postAuthor": "Netology"
+          "postId": 1,
+          "postAuthor": "Vasiliy",
+          "postContent": "Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение...Очень длинное сообщение..."
         }""".trimIndent())
         .setToken(token)
         .build()
